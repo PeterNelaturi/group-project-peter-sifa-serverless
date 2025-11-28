@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waka Wai Rescue</title>
+
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="icon" href="./assets/img/save-water.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-3">Waka Wai Rescue</h1>
+    </div>
+
+    <div id="setting" class="container mt-4">
+        <div class="row">
+            <!-- 左侧介绍 -->
+            <div class="col-md-7">
+                <h2>Introduction</h2>
+                <p>
+                    The purpose of this game is to inspire players to care for the precious waterways of Aotearoa New
+                    Zealand.
+                    Water (<strong>wai</strong>) is a <em>taonga</em>—a treasured resource deeply valued in Māori
+                    culture
+                    and across communities.
+                </p>
+                <p>
+                    Your mission is to collect as much trash as possible within the time limit to help protect the
+                    rivers
+                    (<strong>awa</strong>) and seas (<strong>wai-tai</strong>).
+                    Use the arrow keys or W, A, S, D to steer your vessel. Press the spacebar to collect trash when your
+                    vessel intersects with it.
+                </p>
+                <p>
+                    <strong>How to play:</strong> <br>
+                    W or ↑: Move to up;<br>
+                    S or ↓: Move to down;<br>
+                    A or ←: Move to left;<br>
+                    D or →: Move to right;<br>
+                    Space: Pick trashes;<br>
+                    Ctrl: Make a sprite.<br>
+                </p>
+            </div>
+
+            <!-- 右侧选项 -->
+            <div class="col-md-5">
+                <div class="mb-3">
+                    <label for="duration" class="form-label">Duration</label>
+                    <select class="form-select" id="duration">
+                        <option value="30">30 s</option>
+                        <option value="60" selected>1 min</option>
+                        <option value="120">2 min</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="trash-type" class="form-label">Type of Trash</label>
+                    <select class="form-select" id="trash-type">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="startDiv" class="text-center">
+            <button id="btnStart" class="btn btn-primary" onclick="start()">Start</button>
+        </div>
+
+        <div id="docment" class="text-center">
+            <button class="btn btn-info" onclick="wireframe()">Wireframe</button>
+            <button class="btn btn-info" onclick="storyboards()">Storyboards</button>
+        </div>
+    </div>
+
+    <div id="canvas" class="hidden text-center" >
+        <canvas id="myCanvas">
+            Your web browser does not support HTML5 Canvas.
+        </canvas>
+         <i id="replay" class="fa-regular fa-circle-play fa-5x hidden"></i>
+        <div id="controlbolume">
+            <label for="volumeControl">Volume:</label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+        </div>
+    </div>
+    
+    <footer>
+        Website developed by Sifa & Peter
+    </footer>
+
+    <script src="js/game.js"></script>
+    <script src="https://kit.fontawesome.com/d2810c4136.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+  overflow-y: scroll;
+}
+
+
+/* For Map height and Boarder */
+#map {
+  height: 600px;         
+  border: 2px solid #444; 
+}
+
+
+#filter {
+  margin-top: 10px;
+}
+
+#timeFilter, 
+#numberFilter {
+ min-width: 250px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
